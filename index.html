@@ -1,230 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>总裁早餐 - 配图生成</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        // 配置Tailwind自定义主题（总裁早餐风格）
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2A3B4C', // 总裁风主色调-深蓝灰
-                        secondary: '#F5A623', // 点缀色-商务金
-                        neutral: '#F8F9FA', // 背景浅灰
-                        dark: '#1A202C' // 深文字色
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .card-shadow {
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            }
-            .btn-hover {
-                transition: all 0.3s ease;
-            }
-            .btn-hover:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 12px rgba(42, 59, 76, 0.15);
-            }
-        }
-    </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>总裁早餐｜今日情报（2026-01-15）</title>
+  <meta name="description" content="总裁早餐｜今日情报：每条包含资讯提要、核心判断、SWOT、趋势预判与详解。"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 999px; }
+    ::-webkit-scrollbar-track { background: rgba(255,255,255,.04); }
+    /* 图片懒加载过渡 */
+    .img-wrapper {
+      background: rgba(255,255,255,.03);
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .img-wrapper img {
+      transition: opacity 0.5s ease;
+    }
+  </style>
 </head>
-<body class="bg-neutral min-h-screen">
-    <!-- 顶部导航 -->
-    <header class="bg-white card-shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i class="fa fa-coffee text-secondary text-2xl"></i>
-                <h1 class="text-primary font-bold text-xl md:text-2xl">总裁早餐 · 配图生成</h1>
-            </div>
-            <div class="hidden md:block text-dark/70">
-                高效生成专业商务配图
-            </div>
+<body class="min-h-screen bg-[#0b1020] text-gray-100">
+  <div class="fixed inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0b1020] via-[#0b1020] to-black"></div>
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full blur-3xl opacity-30 bg-sky-500/20"></div>
+    <div class="absolute top-40 right-0 w-[700px] h-[700px] rounded-full blur-3xl opacity-25 bg-fuchsia-500/15"></div>
+  </div>
+
+  <header class="sticky top-0 z-40 backdrop-blur bg-black/30 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between gap-4">
+      <div class="min-w-0">
+        <div class="text-sm text-gray-300">红板报 · 总裁早餐</div>
+        <div class="text-base md:text-lg font-semibold text-white truncate">总裁早餐｜今日情报（2026-01-15）</div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="btnToc" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 text-sm">目录</button>
+        <button id="btnCopy" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 text-sm">复制全文</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10">
+    <div class="mb-8 md:mb-10">
+      <h1 class="text-2xl md:text-4xl font-bold tracking-tight text-white">今日情报 · 10条</h1>
+      <p class="mt-3 text-gray-300 max-w-3xl leading-7">以下为结构化商业解读，便于快速决策与内部讨论。内容基于公开信息与市场讨论的整理与分析，不构成投资建议。</p>
+    </div>
+
+    <div id="content" class="space-y-6 md:space-y-8">
+      
+<section id="n1" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">全球宏观</span>
+      <span class="text-xs text-gray-400">#01</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">格陵兰议题僵持：北极资源与航道的战略化升温</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1015/800/400" alt="北极航道与资源分布示意图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>丹麦、格陵兰与美国官员就相关主张会晤后未达成一致，丹方公开表示存在“根本分歧”。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>北极正在从“科考与环保叙事”切换到“资源、航道与安全资产”的综合竞争场。对企业而言，关键不在立场，而在地缘摩擦如何改变能源、航运与矿产的风险定价。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">北极议题升温带来资源开发、航运与卫星通信等方向的关注度与资本溢价。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">高度依赖单一航运通道/单一地区矿源的供应链，对地缘波动更脆弱。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">提前布局“多通道+多矿源”采购与保险方案；关注极地通信、导航与基础设施服务商。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">盟友关系摩擦与规则不确定性抬高长期保险费率与合规成本，项目周期拉长。</span></div>
         </div>
-    </header>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>北极资产将被纳入更多机构的“安全资产/关键资源”篮子，相关项目审批与安全审查趋严，长期拉锯常态化。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">从经营角度看，这类僵持最先影响的是“风险溢价”。当领土与资源被战略化，航运保险、再保险报价、关键矿产的长期合同条款都会更保守：更高的不可抗力条款、更多的备用港口与备货要求。对有跨境采购与国际物流的企业，建议把北极相关风险当作“长期变量”写进预算：一是梳理原材料与航运路径的替代选项；二是把关键物料的安全库存从“成本项”升级为“连续经营项”；三是关注极地通信与遥感数据服务，它们往往是地缘不确定性上升时的刚需基础设施。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 主内容区 -->
-    <main class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- 左侧配置区 -->
-            <div class="lg:col-span-1 bg-white rounded-xl card-shadow p-6">
-                <h2 class="text-primary font-bold text-lg mb-6 pb-3 border-b border-gray-100">配图设置</h2>
-                
-                <!-- 标题输入 -->
-                <div class="mb-5">
-                    <label class="block text-dark/80 mb-2 text-sm">标题文字</label>
-                    <input type="text" id="titleText" placeholder="输入配图标题" 
-                           class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
-                </div>
-
-                <!-- 副标题输入 -->
-                <div class="mb-5">
-                    <label class="block text-dark/80 mb-2 text-sm">副标题文字</label>
-                    <input type="text" id="subTitleText" placeholder="输入配图副标题" 
-                           class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
-                </div>
-
-                <!-- 风格选择 -->
-                <div class="mb-5">
-                    <label class="block text-dark/80 mb-2 text-sm">配图风格</label>
-                    <select id="styleSelect" 
-                            class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
-                        <option value="business">商务简约</option>
-                        <option value="finance">金融数据</option>
-                        <option value="leadership">领导力</option>
-                        <option value="strategy">战略分析</option>
-                    </select>
-                </div>
-
-                <!-- 尺寸选择 -->
-                <div class="mb-5">
-                    <label class="block text-dark/80 mb-2 text-sm">配图尺寸</label>
-                    <div class="grid grid-cols-3 gap-2">
-                        <button class="size-btn active px-2 py-1 border border-primary bg-primary/5 text-primary rounded-md text-sm" data-size="16:9">16:9</button>
-                        <button class="size-btn px-2 py-1 border border-gray-200 text-dark/70 rounded-md text-sm" data-size="4:3">4:3</button>
-                        <button class="size-btn px-2 py-1 border border-gray-200 text-dark/70 rounded-md text-sm" data-size="1:1">1:1</button>
-                    </div>
-                </div>
-
-                <!-- 生成按钮 -->
-                <button id="generateBtn" class="w-full bg-primary text-white py-3 rounded-lg btn-hover flex items-center justify-center gap-2 mt-6">
-                    <i class="fa fa-magic"></i>
-                    生成配图
-                </button>
-
-                <!-- 下载按钮 -->
-                <button id="downloadBtn" class="w-full bg-secondary text-white py-3 rounded-lg btn-hover flex items-center justify-center gap-2 mt-3 hidden">
-                    <i class="fa fa-download"></i>
-                    下载配图
-                </button>
-            </div>
-
-            <!-- 右侧预览区 -->
-            <div class="lg:col-span-2 bg-white rounded-xl card-shadow p-6 flex flex-col items-center justify-center">
-                <h2 class="text-primary font-bold text-lg mb-6 pb-3 border-b border-gray-100 w-full text-center">配图预览</h2>
-                
-                <div class="preview-container w-full max-w-2xl aspect-video bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden">
-                    <div id="previewArea" class="w-full h-full flex flex-col items-center justify-center p-8 text-center bg-primary/5 relative">
-                        <!-- 默认占位 -->
-                        <div class="placeholder-content">
-                            <i class="fa fa-image text-primary/30 text-6xl mb-4"></i>
-                            <p class="text-dark/50">点击左侧「生成配图」按钮</p>
-                            <p class="text-dark/40 text-sm mt-2">生成符合总裁早餐风格的专业配图</p>
-                        </div>
-                        
-                        <!-- 生成的配图内容（默认隐藏） -->
-                        <div id="imageContent" class="hidden w-full h-full flex flex-col justify-center items-center text-center">
-                            <h3 id="previewTitle" class="text-primary font-bold text-3xl md:text-4xl mb-4"></h3>
-                            <p id="previewSubtitle" class="text-dark/70 text-lg md:text-xl"></p>
-                            <div class="absolute bottom-6 right-6 text-secondary/50 text-sm">总裁早餐 © 2026</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="n2" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">全球宏观</span>
+      <span class="text-xs text-gray-400">#02</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">中东叙事反复：油价成为“政策措辞敏感资产”</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1025/800/400" alt="国际油价波动趋势图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>有关伊朗局势的表态出现缓和信号后，原油等资产从高位回落，市场情绪随消息快速切换。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>能源价格对地缘与政策措辞的敏感度明显上升，波动本身正在成为成本。企业需要把“油价波动”当作经营要素管理，而不是事后解释。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">若企业本身有能源相关收入或可转嫁成本，短期波动可能带来更高议价空间。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">缺乏套期保值与成本传导机制的企业，利润率更容易被单次波动击穿。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">建立分层对冲：部分锁价+期权保护；同时优化合同中的燃油附加费与调价条款。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">若叙事再度升级，航运与保险成本可能同步抬升，交付周期与现金流压力放大。</span></div>
         </div>
-    </main>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>未来一段时间油价可能呈现“高波动、低可预测”的新常态，企业的对冲与定价机制将成为竞争力的一部分。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">很多公司真正怕的不是“油价高”，而是“油价忽上忽下”。当价格波动加大，财务预测误差会迅速扩大：采购、物流、交付、回款都可能被连锁影响。更务实的做法是把能源管理拆成三步：第一步做“暴露度盘点”（哪些产品/路线对油价敏感）；第二步设置“可承受区间”（超出区间自动触发锁价或调价）；第三步在销售合同中明确成本传导机制（燃油附加费、季度调价、指数联动）。目的不是押方向，而是把波动从“不可控风险”变成“可管理变量”。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- 页脚 -->
-    <footer class="bg-primary text-white/80 py-6 mt-12">
-        <div class="container mx-auto px-4 text-center text-sm">
-            总裁早餐 · 专业商务内容创作工具 © 2026 版权所有
+<section id="n3" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">行业雷达</span>
+      <span class="text-xs text-gray-400">#03</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">台积电利润强劲：先进制程仍是算力时代的硬通货</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/180/800/400" alt="台积电先进制程生产线" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>台积电最新季度利润显著高于市场预期，AI相关需求继续支撑先进制程与高端封装。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>AI的短期市场情绪会轮动，但“硬件底座”的约束更像物理定律：先进制程、封装与产能分配决定了算力供给曲线。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">产业链上游（设备、材料、封测）景气度延续，确定性相对更强。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">关键产能高度集中，任何扰动都会放大交付与成本波动。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">对AI硬件依赖度高的企业可提前锁定关键器件交期；同时评估多地制造与多供应商策略。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">产能错配会导致“有订单无交付”，并推高整机与数据中心扩张成本。</span></div>
         </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>先进制程与先进封装的“产能即权力”逻辑仍将持续，更多客户会从短单转向长协与预付款锁量。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">在AI产业链里，最稀缺的往往不是“想法”，而是“可交付的晶圆与封装产能”。当龙头的业绩继续被AI拉动，说明下游客户愿意为确定性交付付费：更长的锁量合同、更高的预付款、更紧的产能绑定。对企业侧而言，建议把“关键器件交付”纳入战略采购：提前6–12个月做产能预定；对关键零部件引入第二来源验证；在产品路线图中预留“替代料号”与“可降配方案”。这不是唱衰，而是把不可控的供给波动变成可预案管理。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n4" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">行业雷达</span>
+      <span class="text-xs text-gray-400">#04</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">AI人才回流与挖角加剧：资源向头部集中</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1076/800/400" alt="AI人才流动趋势图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>部分明星创业团队出现人员回流头部机构的现象，反映AI初创在算力、数据与工程化上的压力。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>大模型竞争正在从“技术想象力”转向“资源整合力”。人才流动不是八卦，而是行业资源再分配的信号。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">头部机构通过人才回流巩固工程化与产品化能力，交付确定性更强。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">中小团队的人才留存与项目连续性更脆弱，路线更容易被迫调整。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">企业侧可在“头部生态”中寻找更稳定的合作伙伴；投资侧更应看重交付与现金流而非光环。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">人才成本继续上行，研发周期拉长，融资窗口一旦收紧，中小团队风险暴露更快。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>行业将进入“并购+整合”节奏，人才与算力会向少数平台集中，独立中型团队生存空间收窄。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">对用AI提升效率的企业来说，最关键的问题是：合作方能不能长期交付？当你看到人才向头部回流，意味着很多“看起来很强”的团队也在面对工程化与资源的硬约束。建议把供应商管理从“看Demo”升级为“看交付”：要求里程碑、SLA（服务水平协议）、数据与模型的可迁移性；把核心能力分层采购，避免单点依赖；必要时用“共同开发+知识转移”的方式降低被卡脖子的风险。投资端也应回到基本面：客户、收入、毛利与合规。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n5" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">监管与合规</span>
+      <span class="text-xs text-gray-400">#05</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">生成式内容合规压力上升：平台责任走向“可追溯”</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/48/800/400" alt="AI生成内容合规审核流程" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>围绕AI生成内容的争议引发更严格的合规关注，平台面临更高的审核、留痕与处置要求。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>生成式AI的商业化门槛正在从“能不能做”变成“怎么合规地做”。合规能力将成为产品竞争力的一部分。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">推动安全对齐、鉴伪、水印与内容治理工具需求上升。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">内容审核与风控链路薄弱的平台，边际合规成本会显著上升。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">企业可优先采用“默认安全”的生成能力（白名单、场景限定、审计留痕）；安全厂商有望获得增量。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">若触发争议事件，产品下架、罚款与声誉损失会叠加，商业化节奏被迫放缓。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>主要市场会加速完善生成内容治理规则，平台将更强调“可追溯、可解释、可处置”。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">合规不是把功能关掉，而是把风险做成流程。对于做内容/营销/客服/社区的企业，建议优先采用三件套：第一，场景限定（把模型能力限定在明确业务范围）；第二，权限与留痕（谁生成、用什么素材、发到哪里都可追溯）；第三，处置闭环（触发规则后能快速下架、申诉、复盘）。对外沟通也要避免“万能AI”话术，改成“在特定场景下提升效率的工具”。当行业从道德争论走向法律成本，谁能把治理做得像财务内控一样扎实，谁就更容易长期跑赢。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n6" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">全球宏观</span>
+      <span class="text-xs text-gray-400">#06</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">英国经济数据超预期：货币政策转向或更审慎</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1031/800/400" alt="英国GDP增长趋势图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>英国最新月度GDP增速好于预期，缓解了对高利率下经济停滞的担忧。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>在高利率环境下，经济韧性会推迟政策转向。对跨境业务而言，这影响的不只是汇率，更是融资与消费节奏。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">经济韧性有利于消费与服务业订单，英镑资产波动或收敛。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">对英国市场依赖度高、成本转嫁弱的企业，利率维持时间越长压力越大。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">趁融资窗口尚可，优化债务久期与利率结构；对英业务更精细地做价格与促销策略。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">若通胀粘性增强，利率维持更久，居民与企业杠杆承压，需求再度转弱。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>英国政策将更“看数据走”，市场对单一路径押注减少，企业需提高情景规划能力。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">很多企业把英国当作“成熟市场=稳定”，但在高利率周期里，成熟市场也会出现需求结构的快速变化：高端服务仍有韧性，中低端消费更谨慎。建议对英业务用两条线管理：一条看“订单与客单价”，另一条看“回款周期与坏账率”。同时，若有英镑收入与美元/人民币成本错配，最好提前做自然对冲（同币种采购/同币种融资）或使用远期锁汇。宏观数据的意义不在新闻本身，而在它会改变你需要准备多少缓冲垫。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n7" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">监管与合规</span>
+      <span class="text-xs text-gray-400">#07</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">算力管制延伸到服务：跨境云端训练与合规成本上升</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/160/800/400" alt="全球算力分布与合规架构示意图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>相关立法讨论把限制从芯片出口延伸至云端算力服务的使用许可与合规要求。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>当限制从硬件扩展到服务，企业的应对不再是找替代芯片，而是重构训练与部署的地理与合规架构。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">推动合规云、区域数据中心与替代算力生态发展。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">依赖海外云训练且缺乏备选方案的路径，项目连续性风险上升。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">采用多云与多区域架构；把训练、微调、推理分层部署，降低对单一地区依赖。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">许可与审查流程可能拉长交付周期，并增加合同、法务与审计成本。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>全球算力将更区域化，企业会把算力当作关键生产要素进行布局与储备。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">对多数企业来说，最现实的问题是：模型训练与迭代会不会突然变慢、变贵。应对可以很工程化：把算力需求拆成三层——研发探索（弹性算力）、稳定训练（可预期成本与合规）、线上推理（延迟与数据合规）。然后为每层配置至少两套方案：不同云、不同区域、不同供应商。与此同时，把模型与数据资产做好可迁移：容器化、标准化、日志与审计可导出。这样即便规则变化，你也能把合规成本控制在可承受范围。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n8" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">行业雷达</span>
+      <span class="text-xs text-gray-400">#08</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">AI代理加速进入电商：入口从搜索框迁移到“决策助手”</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/26/800/400" alt="AI电商决策助手交互示意图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>平台与科技公司加速布局AI代理，覆盖选品、比价、下单与售后等流程。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>流量入口正在从“页面”迁移到“代理”。这会改写品牌获客逻辑：你要说服的不只是消费者，还有给消费者做决策的算法。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">降低用户决策成本，提升转化率与复购，利好供应链效率强的商家。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">商品信息结构化与接口适配能力不足的商家，曝光会被系统性稀释。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">建设机器可读的商品数据（规格、证书、评价要点）；优化履约与售后指标以获取算法偏好。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">平台规则变化会放大头部效应，中小商家可能被迫卷入价格战或被边缘化。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>面向AI的商品运营会成为新岗位：数据结构化、接口、评价治理与履约指标共同决定流量。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">过去做电商是运营搜索词，未来更像运营一个会下单的助手。AI代理会偏好三类商家：信息更标准、履约更稳定、售后更可控。建议从两端入手：前端把卖点拆成可量化字段（材质、尺寸、适配场景、对比项）；后端把履约做到可预测（发货时效、退换货SOP、客服响应）。更重要的是把品牌故事从情绪文案转成可信证据：第三方认证、质检报告、真实使用场景。算法并不讨厌情绪，它讨厌不可验证。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n9" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">人才与组织</span>
+      <span class="text-xs text-gray-400">#09</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">学历供给扩张与技能重估：人才策略从“证书”转向“交付能力”</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1049/800/400" alt="人才技能匹配度分析图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>研究指出高学历供给扩大带来匹配压力，同时AI对岗位技能结构提出新要求。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>学历不再自动等于生产力。企业竞争力取决于能否快速把员工升级到能用AI交付成果。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">人才供给更充裕，企业有机会以更合理成本吸引研究型人才。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">若缺乏训练体系，高学历员工也可能出现能力错配。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">建立岗位级AI能力框架（工具、数据、流程）；与高校/机构做联合培养与实习预订。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">若转型慢，关键岗位会出现断层：既懂业务又懂AI的人才成为瓶颈，成本上行。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>技能证据将强于证书光环，企业更看重项目作品、工具熟练度与跨学科协作能力。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">管理层最该做的是把“学习”变成制度，而不是口号。建议把人才体系做成三层：一线员工学会用AI提效（写、查、总结、生成表格）；中层学会用AI做管理（指标、复盘、流程自动化）；核心岗位学会用AI做业务创新（产品、增长、风控）。同时用作品集替代空泛评估：给候选人一个真实业务小题，看他能否用AI+专业知识交付结果。这样招到的人，才更可能在不确定环境里持续产出。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="n10" class="scroll-mt-24">
+  <div class="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-7 shadow-lg">
+    <div class="flex flex-wrap items-center gap-3 mb-3">
+      <span class="text-xs px-2 py-1 rounded-full bg-white/10 text-gray-200">社会与消费</span>
+      <span class="text-xs text-gray-400">#10</span>
+    </div>
+    <h2 class="text-xl md:text-2xl font-semibold text-white leading-snug">柔性退休与再就业：劳动力结构变化正在重塑服务业</h2>
+    <!-- 新增配图区域 -->
+    <div class="my-4 img-wrapper">
+      <img src="https://picsum.photos/id/1060/800/400" alt="柔性退休与再就业趋势图" class="w-full h-auto opacity-90 hover:opacity-100" loading="lazy">
+    </div>
+    <div class="mt-4 space-y-3 text-[15px] leading-7 text-gray-200">
+      <p><span class="font-semibold text-white/90">📰 资讯提要：</span>调查显示一部分退休人群计划重返职场，背后是生活成本、寿命预期与岗位供需的共同作用。</p>
+      <p><span class="font-semibold text-white/90">🧠 核心判断：</span>一生一份工作再退休的旧模型在松动。劳动力供给结构变化会影响用工成本、培训体系与产品设计。</p>
+      <div class="rounded-xl bg-black/20 border border-white/10 p-4">
+        <div class="font-semibold text-white/90 mb-2">📊 SWOT 战术板（总裁视角）</div>
+        <div class="grid md:grid-cols-2 gap-2 text-[14px] leading-6">
+          <div><span class="text-emerald-300 font-semibold">S｜利好：</span><span class="text-gray-200">经验型劳动力回流可缓解部分岗位缺口，提高服务质量与稳定性。</span></div>
+          <div><span class="text-gray-300 font-semibold">W｜暴露点：</span><span class="text-gray-200">技能代差与健康管理需求上升，培训与岗位设计要更精细。</span></div>
+          <div><span class="text-sky-300 font-semibold">O｜机会：</span><span class="text-gray-200">发展面向银发再就业的培训、轻量岗位与辅助工具；探索导师制+弹性用工。</span></div>
+          <div><span class="text-rose-300 font-semibold">T｜威胁：</span><span class="text-gray-200">若薪资与岗位结构调整不当，可能挤压年轻人晋升空间，引发组织活力与文化问题。</span></div>
+        </div>
+      </div>
+      <p><span class="font-semibold text-white/90">🔮 趋势预判：</span>再就业将更常态化，企业会更多提供半退休岗位与技能再训练服务。</p>
+      <div class="pt-2">
+        <div class="font-semibold text-white/90 mb-1">详解（经营视角）</div>
+        <p class="text-gray-200">对企业而言，这是一个既有风险也有机会的结构变化。机会在于银发员工往往更稳定、经验更扎实，适合标准化服务与质量管理；风险在于如果岗位设计不友好（强体力、强夜班、工具复杂），效率与安全事故成本会抬升。建议把银发用工当作产品设计来做：把任务拆分、降低体力与数字门槛、提供更清晰流程与辅助工具；用导师制让经验快速传递给年轻员工。对做ToC的企业，也可以把银发从消费者延展为生产参与者，形成新的供给侧。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+
+    <footer class="mt-12 md:mt-16 py-10 text-sm text-gray-400 border-t border-white/10">
+      <div>© 2026 红板报</div>
     </footer>
+  </main>
 
-    <script>
-        // 页面加载完成后初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            // 尺寸选择按钮切换
-            const sizeBtns = document.querySelectorAll('.size-btn');
-            sizeBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // 移除所有按钮的激活状态
-                    sizeBtns.forEach(b => {
-                        b.classList.remove('active', 'border-primary', 'bg-primary/5', 'text-primary');
-                        b.classList.add('border-gray-200', 'text-dark/70');
-                    });
-                    // 添加当前按钮的激活状态
-                    this.classList.add('active', 'border-primary', 'bg-primary/5', 'text-primary');
-                    this.classList.remove('border-gray-200', 'text-dark/70');
-                    
-                    // 更新预览区比例
-                    const size = this.dataset.size;
-                    const previewContainer = document.querySelector('.preview-container');
-                    if (size === '16:9') {
-                        previewContainer.className = 'preview-container w-full max-w-2xl aspect-video bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden';
-                    } else if (size === '4:3') {
-                        previewContainer.className = 'preview-container w-full max-w-2xl aspect-[4/3] bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden';
-                    } else if (size === '1:1') {
-                        previewContainer.className = 'preview-container w-full max-w-2xl aspect-square bg-gray-50 rounded-lg flex items-center justify-center overflow-hidden';
-                    }
-                });
-            });
+  <div id="tocPanel" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 bg-black/60" id="tocMask"></div>
+    <div class="absolute right-0 top-0 h-full w-full sm:w-[420px] bg-[#0c1226] border-l border-white/10 p-4 sm:p-6 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-lg font-semibold">目录</div>
+        <button id="btnCloseToc" class="px-3 py-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/10 text-sm">关闭</button>
+      </div>
+      <div class="space-y-1">
+        <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n1">1. 格陵兰议题僵持：北极资源与航道的战略化升温</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n2">2. 中东叙事反复：油价成为“政策措辞敏感资产”</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n3">3. 台积电利润强劲：先进制程仍是算力时代的硬通货</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n4">4. AI人才回流与挖角加剧：资源向头部集中</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n5">5. 生成式内容合规压力上升：平台责任走向“可追溯”</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n6">6. 英国经济数据超预期：货币政策转向或更审慎</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n7">7. 算力管制延伸到服务：跨境云端训练与合规成本上升</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n8">8. AI代理加速进入电商：入口从搜索框迁移到“决策助手”</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n9">9. 学历供给扩张与技能重估：人才策略从“证书”转向“交付能力”</a><a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-gray-200" href="#n10">10. 柔性退休与再就业：劳动力结构变化正在重塑服务业</a>
+      </div>
+    </div>
+  </div>
 
-            // 生成配图按钮点击事件
-            const generateBtn = document.getElementById('generateBtn');
-            generateBtn.addEventListener('click', function() {
-                // 获取输入值
-                const title = document.getElementById('titleText').value || '总裁早餐精选';
-                const subtitle = document.getElementById('subTitleText').value || '每日商业洞察 · 决策参考';
-                const style = document.getElementById('styleSelect').value;
-                
-                // 更新预览内容
-                document.getElementById('previewTitle').textContent = title;
-                document.getElementById('previewSubtitle').textContent = subtitle;
-                
-                // 根据风格设置背景
-                const imageContent = document.getElementById('imageContent');
-                const styleBgMap = {
-                    'business': 'bg-primary/5',
-                    'finance': 'bg-[#E8F4F8]',
-                    'leadership': 'bg-[#F9F5F0]',
-                    'strategy': 'bg-[#F5F5F5]'
-                };
-                imageContent.className = `w-full h-full flex flex-col justify-center items-center text-center ${styleBgMap[style]}`;
-                
-                // 显示生成的内容，隐藏占位符
-                document.querySelector('.placeholder-content').classList.add('hidden');
-                imageContent.classList.remove('hidden');
-                
-                // 显示下载按钮
-                document.getElementById('downloadBtn').classList.remove('hidden');
-                
-                // 按钮状态反馈
-                generateBtn.innerHTML = '<i class="fa fa-check"></i> 配图已生成';
-                setTimeout(() => {
-                    generateBtn.innerHTML = '<i class="fa fa-magic"></i> 生成配图';
-                }, 2000);
-            });
+  <script>
+    const tocPanel = document.getElementById('tocPanel');
+    const btnToc = document.getElementById('btnToc');
+    const btnCloseToc = document.getElementById('btnCloseToc');
+    const tocMask = document.getElementById('tocMask');
+    const btnCopy = document.getElementById('btnCopy');
+    const content = document.getElementById('content');
 
-            // 下载配图功能
-            document.getElementById('downloadBtn').addEventListener('click', function() {
-                // 这里简化处理，实际项目中可使用html2canvas等库将DOM转为图片
-                alert('配图生成成功！实际项目中可集成html2canvas实现图片下载功能。');
-                
-                // 实际生产环境的下载实现示例（需引入html2canvas）：
-                /*
-                html2canvas(document.getElementById('previewArea')).then(canvas => {
-                    const link = document.createElement('a');
-                    link.download = '总裁早餐配图_' + new Date().getTime() + '.png';
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-                });
-                */
-            });
+    function openToc() {
+      tocPanel.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeToc() {
+      tocPanel.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    btnToc.addEventListener('click', openToc);
+    btnCloseToc.addEventListener('click', closeToc);
+    tocMask.addEventListener('click', closeToc);
+    tocPanel.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') closeToc();
+    });
+
+    btnCopy.addEventListener('click', async () => {
+      const text = content.innerText.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+        btnCopy.textContent = '已复制';
+        setTimeout(()=>btnCopy.textContent='复制全文', 1200);
+      } catch (err) {
+        alert('复制失败：请手动选择文本复制');
+      }
+    });
+
+    // 图片加载优化：懒加载+淡入效果
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.style.opacity = '0.2';
+        img.addEventListener('load', () => {
+          img.style.opacity = '0.9';
         });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
